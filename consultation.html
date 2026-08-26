@@ -170,127 +170,52 @@
             color: white;
         }
 
-        /* فرم */
-        .form-container {
+        /* بخش راهنمای مشاوره */
+        .consultation-box {
             width: 90%;
             max-width: 800px;
-            margin: auto;
+            margin: 30px auto 60px;
             background: white;
-            padding: 35px;
+            padding: 40px 30px;
             border-radius: 20px;
+            text-align: center;
             box-shadow: 0 8px 25px rgba(0,91,170,0.15);
-            margin-bottom: 50px;
         }
 
-        .form-container h2 {
-            text-align: center;
+        .consultation-box h2 {
             color: #005baa;
-            margin-bottom: 30px;
             font-size: 26px;
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-            font-weight: bold;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ccdceb;
-            border-radius: 10px;
-            font-family: Tahoma, Arial, sans-serif;
-            font-size: 15px;
-            outline: none;
-            transition: 0.3s;
-        }
-
-        input:focus,
-        select:focus,
-        textarea:focus {
-            border-color: #005baa;
-            box-shadow: 0 0 8px rgba(0,91,170,0.15);
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: #005baa;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-size: 18px;
-            font-family: Tahoma, Arial, sans-serif;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #003d73;
-        }
-
-        /* پیام */
-        .message {
-            margin-top: 20px;
-            text-align: center;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .success {
-            color: green;
-        }
-
-        .error {
-            color: #d60000;
-        }
-
-        /* لیست مشتریان */
-        .customer-list {
-            width: 90%;
-            max-width: 800px;
-            margin: 0 auto 60px;
-            background: white;
-            border-radius: 20px;
-            padding: 30px;
-            box-shadow: 0 8px 25px rgba(0,91,170,0.12);
-        }
-
-        .customer-list h2 {
-            color: #005baa;
-            text-align: center;
             margin-bottom: 25px;
         }
 
-        .customer-list ul {
-            list-style: none;
+        .consultation-box p {
+            color: #444;
+            font-size: 18px;
+            line-height: 2.3;
+            margin-bottom: 25px;
         }
 
-        .customer-list li {
-            background: #f1f7fc;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            border-right: 4px solid #005baa;
-            color: #333;
+        .consultation-box .highlight {
+            color: #005baa;
+            font-weight: bold;
         }
 
-        .empty-list {
-            text-align: center;
-            color: #777;
+        .rubika-main-btn {
+            display: inline-block;
+            background: #1687d3;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-family: Tahoma, Arial, sans-serif;
+            transition: 0.3s;
+        }
+
+        .rubika-main-btn:hover {
+            background: #0d6fae;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
         }
 
         /* فوتر */
@@ -305,6 +230,7 @@
             line-height: 2;
         }
 
+        /* موبایل */
         @media (max-width: 600px) {
 
             header h1 {
@@ -323,8 +249,21 @@
                 font-size: 15px;
             }
 
-            .form-container {
-                padding: 25px 18px;
+            .consultation-box {
+                padding: 30px 20px;
+            }
+
+            .consultation-box h2 {
+                font-size: 23px;
+            }
+
+            .consultation-box p {
+                font-size: 16px;
+            }
+
+            .contact-btn {
+                width: 100%;
+                text-align: center;
             }
 
         }
@@ -336,19 +275,23 @@
 
     <!-- هدر -->
     <header>
+
         <h1>دریافت مشاوره</h1>
 
         <p>
             در کنار شما هستیم تا بهترین انتخاب را برای آینده‌ای مطمئن داشته باشید.
         </p>
+
     </header>
 
 
     <!-- بازگشت -->
     <div class="back-container">
+
         <a href="index.html" class="back-btn">
             ← بازگشت به صفحه اصلی
         </a>
+
     </div>
 
 
@@ -358,9 +301,8 @@
         <h2>مشاوره درست، انتخاب مطمئن</h2>
 
         <p>
-            انتخاب بیمه مناسب می‌تواند نقش مهمی در آرامش و امنیت آینده شما داشته باشد.
-            ما تلاش می‌کنیم با بررسی نیازها و شرایط شما، مناسب‌ترین راهکار و پوشش بیمه‌ای
-            را پیشنهاد دهیم. اطلاعات خود را ثبت کنید تا بتوانیم بهتر و دقیق‌تر شما را راهنمایی کنیم.
+            برای دریافت اطلاعات و مشاوره درباره خدمات بیمه‌ای،
+            می‌توانید با نمایندگی تماس بگیرید یا سوالات خود را از طریق روبیکا مطرح کنید.
         </p>
 
     </section>
@@ -369,27 +311,41 @@
     <!-- دکمه‌های ارتباط -->
     <section class="contact-buttons">
 
-        <button class="contact-btn call-btn" onclick="togglePhoneNumbers()">
+        <button
+            class="contact-btn call-btn"
+            onclick="togglePhoneNumbers()">
+
             📞 تماس با نمایندگی
+
         </button>
 
-        <a href="https://rubika.ir/az1064602"
-           target="_blank"
-           class="contact-btn rubika-btn">
+
+        <a
+            href="https://rubika.ir/az1064602"
+            target="_blank"
+            class="contact-btn rubika-btn">
+
             💬 ارتباط در روبیکا
+
         </a>
 
     </section>
 
 
     <!-- شماره‌های تماس -->
-    <div class="phone-numbers" id="phoneNumbers">
+    <div
+        class="phone-numbers"
+        id="phoneNumbers">
 
-        <p>یکی از شماره‌ها را برای تماس انتخاب کنید:</p>
+        <p>
+            یکی از شماره‌ها را برای تماس انتخاب کنید:
+        </p>
+
 
         <a href="tel:09136667275">
             📞 09136667275
         </a>
+
 
         <a href="tel:09137254891">
             📞 09137254891
@@ -398,158 +354,30 @@
     </div>
 
 
-    <!-- فرم -->
-    <section class="form-container">
+    <!-- بخش جدید به جای فرم -->
+    <section class="consultation-box">
 
-        <h2>فرم درخواست مشاوره</h2>
+        <h2>
+            راهنمای دریافت مشاوره
+        </h2>
 
-        <form id="consultationForm">
-
-            <div class="form-group">
-
-                <label for="fullname">
-                    نام و نام خانوادگی *
-                </label>
-
-                <input
-                    type="text"
-                    id="fullname"
-                    placeholder="نام و نام خانوادگی خود را وارد کنید"
-                    required
-                    minlength="3"
-                >
-
-            </div>
+        <p>
+            برای دریافت مشاوره با ما تماس بگیرید و
+            <span class="highlight">
+                برای ثبت و رسیدگی به درخواست شما در روبیکا،
+            </span>
+            سوالات خود را مطرح کنید.
+        </p>
 
 
-            <div class="form-group">
+        <a
+            href="https://rubika.ir/az1064602"
+            target="_blank"
+            class="rubika-main-btn">
 
-                <label for="insuranceNumber">
-                    شماره بیمه‌گذار
-                </label>
+            💬 مطرح کردن سوال در روبیکا
 
-                <input
-                    type="text"
-                    id="insuranceNumber"
-                    placeholder="در صورت وجود وارد کنید"
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="insuranceType">
-                    نوع بیمه مورد نظر *
-                </label>
-
-                <select id="insuranceType" required>
-
-                    <option value="">انتخاب نوع بیمه</option>
-                    <option>بیمه شخص ثالث</option>
-                    <option>بیمه بدنه خودرو</option>
-                    <option>بیمه درمان</option>
-                    <option>بیمه عمر</option>
-                    <option>بیمه آتش‌سوزی</option>
-                    <option>بیمه منزل</option>
-                    <option>بیمه کشاورزی</option>
-                    <option>بیمه مسافرتی</option>
-                    <option>بیمه مسئولیت</option>
-                    <option>بیمه مهندسی</option>
-                    <option>بیمه باربری</option>
-                    <option>سایر</option>
-
-                </select>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="address">
-                    آدرس منزل یا محل کار *
-                </label>
-
-                <textarea
-                    id="address"
-                    placeholder="آدرس کامل خود را وارد کنید"
-                    required
-                    minlength="10"
-                ></textarea>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="phone">
-                    شماره تماس *
-                </label>
-
-                <input
-                    type="tel"
-                    id="phone"
-                    placeholder="مثال: 09123456789"
-                    required
-                    pattern="09[0-9]{9}"
-                    maxlength="11"
-                >
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="contactWay">
-                    راه ارتباطی مورد نظر
-                </label>
-
-                <select id="contactWay">
-                    <option>تماس تلفنی</option>
-                    <option>روبیکا</option>
-                    <option>پیامک</option>
-                </select>
-
-            </div>
-
-
-            <div class="form-group">
-
-                <label for="description">
-                    توضیحات بیشتر
-                </label>
-
-                <textarea
-                    id="description"
-                    placeholder="اگر توضیح یا درخواست خاصی دارید اینجا بنویسید..."
-                ></textarea>
-
-            </div>
-
-
-            <button type="submit" class="submit-btn">
-                ذخیره اطلاعات
-            </button>
-
-            <div id="message" class="message"></div>
-
-        </form>
-
-    </section>
-
-
-    <!-- لیست مشتریان -->
-    <section class="customer-list">
-
-        <h2>لیست درخواست‌های ثبت‌شده</h2>
-
-        <ul id="customerList">
-
-            <li class="empty-list" id="emptyMessage">
-                هنوز درخواستی ثبت نشده است.
-            </li>
-
-        </ul>
+        </a>
 
     </section>
 
@@ -557,9 +385,13 @@
     <!-- فوتر -->
     <footer>
 
-        <p>بیمه ایران | نمایندگی خانم عظیمی جلگه</p>
+        <p>
+            بیمه ایران | نمایندگی خانم عظیمی جلگه
+        </p>
 
-        <p>آرامش امروز، اطمینان فردا</p>
+        <p>
+            آرامش امروز، اطمینان فردا
+        </p>
 
     </footer>
 
@@ -568,130 +400,16 @@
 
         /* نمایش یا مخفی کردن شماره‌ها */
         function togglePhoneNumbers() {
+
             document
                 .getElementById("phoneNumbers")
                 .classList
                 .toggle("show");
+
         }
-
-
-        const form = document.getElementById("consultationForm");
-
-        const customerList =
-            document.getElementById("customerList");
-
-        const message =
-            document.getElementById("message");
-
-        const emptyMessage =
-            document.getElementById("emptyMessage");
-
-
-        form.addEventListener("submit", function(event) {
-
-            event.preventDefault();
-
-
-            const fullname =
-                document.getElementById("fullname").value.trim();
-
-            const insuranceType =
-                document.getElementById("insuranceType").value;
-
-            const address =
-                document.getElementById("address").value.trim();
-
-            const phone =
-                document.getElementById("phone").value.trim();
-
-
-            /* بررسی نام */
-            if (fullname.length < 3) {
-
-                message.textContent =
-                    "لطفاً نام و نام خانوادگی را به‌درستی وارد کنید.";
-
-                message.className = "message error";
-
-                return;
-            }
-
-
-            /* بررسی آدرس */
-            if (address.length < 10) {
-
-                message.textContent =
-                    "لطفاً آدرس کامل‌تری وارد کنید.";
-
-                message.className = "message error";
-
-                return;
-            }
-
-
-            /* بررسی شماره تلفن */
-            const phonePattern = /^09[0-9]{9}$/;
-
-            if (!phonePattern.test(phone)) {
-
-                message.textContent =
-                    "لطفاً شماره تلفن معتبر ۱۱ رقمی وارد کنید.";
-
-                message.className = "message error";
-
-                return;
-            }
-
-
-            /* بررسی نوع بیمه */
-            if (insuranceType === "") {
-
-                message.textContent =
-                    "لطفاً نوع بیمه مورد نظر را انتخاب کنید.";
-
-                message.className = "message error";
-
-                return;
-            }
-
-
-            /* حذف پیام خالی */
-            const currentEmptyMessage =
-                document.getElementById("emptyMessage");
-
-            if (currentEmptyMessage) {
-                currentEmptyMessage.remove();
-            }
-
-
-            /* ساخت درخواست جدید */
-            const newCustomer =
-                document.createElement("li");
-
-            newCustomer.innerHTML =
-                "<strong>" + fullname + "</strong>" +
-                "<br>" +
-                "نوع بیمه: " + insuranceType +
-                "<br>" +
-                "شماره تماس: " + phone;
-
-
-            customerList.appendChild(newCustomer);
-
-
-            message.textContent =
-                "اطلاعات شما با موفقیت ثبت شد.";
-
-            message.className =
-                "message success";
-
-
-            /* پاک کردن فرم */
-            form.reset();
-
-        });
 
     </script>
 
 </body>
+
 </html>
