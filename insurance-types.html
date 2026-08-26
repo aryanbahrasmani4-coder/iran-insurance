@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>انواع بیمه‌ها | بیمه ایران</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f5f8fc;
+            color: #163a63;
+        }
+
+        /* هدر */
+        header {
+            background: #005baa;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+        }
+
+        header h1 {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        /* دکمه بازگشت */
+        .back-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 25px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #005baa;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+        }
+
+        .back-btn:hover {
+            background: #003d73;
+        }
+
+        /* توضیحات */
+        .intro {
+            text-align: center;
+            width: 90%;
+            max-width: 800px;
+            margin: 10px auto 40px;
+        }
+
+        .intro h2 {
+            color: #005baa;
+            font-size: 27px;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #555;
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        /* کارت‌ها */
+        .insurance-grid {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            padding-bottom: 40px;
+        }
+
+        .insurance-card {
+            background: white;
+            border-radius: 18px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #e1ebf5;
+            box-shadow: 0 5px 18px rgba(0,91,170,0.12);
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .insurance-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 30px rgba(0,91,170,0.22);
+            border-color: #005baa;
+        }
+
+        .insurance-card.active {
+            border: 2px solid #005baa;
+            background: #eef7ff;
+        }
+
+        .insurance-icon {
+            font-size: 52px;
+            margin-bottom: 15px;
+        }
+
+        .insurance-card h3 {
+            color: #005baa;
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .insurance-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        /* بخش نمایش توضیحات */
+        .details-box {
+            width: 90%;
+            max-width: 1000px;
+            margin: 10px auto 60px;
+            background: white;
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 8px 25px rgba(0,91,170,0.15);
+            border-right: 6px solid #005baa;
+            display: none;
+        }
+
+        .details-box.show {
+            display: block;
+            animation: showDetails 0.4s ease;
+        }
+
+        @keyframes showDetails {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .details-box h2 {
+            color: #005baa;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .details-box p {
+            color: #444;
+            line-height: 2.2;
+            font-size: 17px;
+            white-space: pre-line;
+        }
+
+        /* فوتر */
+        footer {
+            background: #003d73;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        footer p {
+            line-height: 2;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            .intro h2 {
+                font-size: 23px;
+            }
+
+            .intro p {
+                font-size: 15px;
+            }
+
+            .details-box {
+                padding: 25px 20px;
+            }
+
+            .details-box h2 {
+                font-size: 23px;
+            }
+
+            .details-box p {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>انواع بیمه‌ها</h1>
+
+        <p>
+            خدمات متنوع بیمه‌ای برای ایجاد آرامش و اطمینان بیشتر
+       
+ </p>برای اطلاعات بیشتر درباره بیمه ها با نمایندگی تماس بگیرید
+    </header>
+
+
+    <div class="back-container">
+        <a href="index.html" class="back-btn">
+            ← بازگشت به صفحه اصلی
+        </a>
+    </div>
+
+
+    <section class="intro">
+
+        <h2>بیمه مناسب خود را انتخاب کنید</h2>
+
+        <p>
+            روی هر یک از بیمه‌ها کلیک کنید تا توضیحات آن در پایین صفحه نمایش داده شود.
+        </p>
+
+    </section>
+
+
+    <section class="insurance-grid">
+
+        <div class="insurance-card" onclick="showInsurance('personThird', this)">
+            <div class="insurance-icon">🚗</div>
+            <h3>بیمه شخص ثالث</h3>
+            <p>پوشش خسارت‌های جانی و مالی ناشی از حوادث رانندگی.</p>
+        </div>
+
+        <div class="insurance-card" onclick="showInsurance('body', this)">
+            <div class="insurance-icon">🚙</div>
+            <h3>بیمه بدنه خودرو</h3>
+            <p>محافظت از خودرو در برابر خسارت‌ها و حوادث مختلف.</p>
+        </div>
+
+
+        <div class="insurance-card" onclick="showInsurance('life', this)">
+            <div class="insurance-icon">❤️</div>
+            <h3>بیمه عمر</h3>
+            <p>ایجاد پشتوانه مالی برای آینده و خانواده.</p>
+        </div>
+
+        <div class="insurance-card" onclick="showInsurance('fire', this)">
+            <div class="insurance-icon">🔥</div>
+            <h3>بیمه آتش‌سوزی</h3>
+            <p>پوشش خسارت‌های ناشی از آتش‌سوزی و خطرات مرتبط.</p>
+        </div>
+
+        <div class="insurance-card" onclick="showInsurance('home', this)">
+            <div class="insurance-icon">🏠</div>
+            <h3>بیمه منزل</h3>
+            <p>حفاظت از ساختمان و اموال در برابر خطرات احتمالی.</p>
+        </div>
+
+        <div class="insurance-card" onclick="showInsurance('travel', this)">
+            <div class="insurance-icon">✈️</div>
+            <h3>بیمه مسافرتی</h3>
+            <p>پوشش خدمات و حوادث پیش‌بینی‌نشده در سفر.</p>
+        </div>
+
+        <div class="insurance-card" onclick="showInsurance('responsibility', this)">
+            <div class="insurance-icon">🏢</div>
+            <h3>بیمه مسئولیت</h3>
+            <p>پوشش مسئولیت‌های قانونی و خسارت‌های احتمالی.</p>
+        </div>
+
+        <div class="insurance-card" onclick="showInsurance('engineering', this)">
+            <div class="insurance-icon">👷</div>
+            <h3>بیمه مهندسی</h3>
+            <p>پوشش پروژه‌ها، تجهیزات و فعالیت‌های مهندسی.</p>
+        </div>
+
+        <div class="insurance-card" onclick="showInsurance('cargo', this)">
+            <div class="insurance-icon">🚢</div>
+            <h3>بیمه باربری</h3>
+            <p>پوشش کالا و محموله در زمان حمل‌ونقل.</p>
+        </div>
+
+        <div class="insurance-card" onclick="showInsurance('investment', this)">
+            <div class="insurance-icon">💰</div>
+            <h3>بیمه سرمایه‌گذاری</h3>
+            <p>ایجاد پشتوانه مالی و برنامه‌ریزی برای آینده.</p>
+        </div>
+
+    </section>
+
+
+    <!-- توضیحات انتخاب‌شده -->
+    <section class="details-box" id="detailsBox">
+
+        <h2 id="insuranceTitle"></h2>
+
+        <p id="insuranceText"></p>
+
+    </section>
+
+
+    <footer>
+        <p>بیمه ایران | نمایندگی خانم عظیمی جلگه</p>
+        <p>آرامش امروز، اطمینان فردا</p>
+    </footer>
+
+
+    <script>
+
+        const insuranceData = {
+
+            personThird: {
+                title: "🚗 بیمه شخص ثالث",
+                text: `بیمه شخص ثالث یکی از مهم‌ترین بیمه‌های خودرو است.
+
+این بیمه خسارت‌های جانی و مالی واردشده به اشخاص ثالث در حوادث رانندگی را پوشش می‌دهد.
+
+برای دریافت اطلاعات بیشتر و انتخاب پوشش مناسب، می‌توانید با نمایندگی تماس بگیرید.`
+            },
+
+            body: {
+                title: "🚙 بیمه بدنه خودرو",
+                text: `بیمه بدنه برای جبران خسارت‌های واردشده به خودروی شما طراحی شده است.
+
+این بیمه می‌تواند خسارت‌های ناشی از حوادث مختلف مانند تصادف، سرقت و برخی خطرات دیگر را طبق شرایط بیمه‌نامه پوشش دهد.`
+            },
+
+            health: {
+                title: "🏥 بیمه درمان",
+                text: `بیمه درمان به کاهش و پوشش بخشی از هزینه‌های درمانی و پزشکی کمک می‌کند.
+
+نوع پوشش و خدمات قابل استفاده بر اساس شرایط و نوع بیمه‌نامه انتخابی تعیین می‌شود.`
+            },
+
+            life: {
+                title: "❤️ بیمه عمر",
+                text: `بیمه عمر می‌تواند به ایجاد پشتوانه مالی برای آینده شما و خانواده‌تان کمک کند.
+
+این نوع بیمه برای برنامه‌ریزی بلندمدت و ایجاد امنیت مالی مورد استفاده قرار می‌گیرد.`
+            },
+
+            fire: {
+                title: "🔥 بیمه آتش‌سوزی",
+                text: `بیمه آتش‌سوزی برای جبران خسارت‌های واردشده به ساختمان و اموال در اثر آتش‌سوزی و خطرات تحت پوشش بیمه‌نامه ارائه می‌شود.`
+            },
+
+            home: {
+                title: "🏠 بیمه منزل",
+                text: `بیمه منزل می‌تواند از ساختمان و اموال شما در برابر خطرات و خسارت‌های مختلف، مطابق شرایط بیمه‌نامه، محافظت کند.`
+            },
+
+            agriculture: {
+                title: "🌾 بیمه کشاورزی",
+                text: `بیمه کشاورزی با هدف حمایت از کشاورزان و کاهش خسارت‌های احتمالی به محصولات و فعالیت‌های کشاورزی ارائه می‌شود.`
+            },
+
+            travel: {
+                title: "✈️ بیمه مسافرتی",
+                text: `بیمه مسافرتی برای ایجاد آرامش بیشتر در سفر طراحی شده است و می‌تواند خدمات و پوشش‌های مشخصی را در طول سفر ارائه دهد.`
+            },
+
+            responsibility: {
+                title: "🏢 بیمه مسئولیت",
+                text: `بیمه مسئولیت برای پوشش خسارت‌هایی است که ممکن است فرد یا کسب‌وکار در برابر دیگران مسئول جبران آن‌ها باشد، طبق شرایط بیمه‌نامه.`
+            },
+
+            engineering: {
+                title: "👷 بیمه مهندسی",
+                text: `بیمه مهندسی برای پروژه‌ها، تجهیزات و فعالیت‌های فنی و مهندسی طراحی شده و نوع پوشش آن بر اساس شرایط پروژه تعیین می‌شود.`
+            },
+
+            cargo: {
+                title: "🚢 بیمه باربری",
+                text: `بیمه باربری برای پوشش خطرات احتمالی کالا و محموله در جریان حمل‌ونقل استفاده می‌شود.`
+            },
+
+            investment: {
+                title: "💰 بیمه سرمایه‌گذاری",
+                text: `این نوع خدمات می‌تواند برای برنامه‌ریزی مالی و ایجاد پشتوانه برای آینده مورد استفاده قرار گیرد و شرایط آن بر اساس طرح انتخابی مشخص می‌شود.`
+            }
+
+        };
+
+
+        function showInsurance(type, clickedCard) {
+
+            const selected = insuranceData[type];
+
+            document.getElementById("insuranceTitle").innerText = selected.title;
+
+            document.getElementById("insuranceText").innerText = selected.text;
+
+            const detailsBox = document.getElementById("detailsBox");
+
+            detailsBox.classList.remove("show");
+
+            void detailsBox.offsetWidth;
+
+            detailsBox.classList.add("show");
+
+
+            document.querySelectorAll(".insurance-card").forEach(card => {
+                card.classList.remove("active");
+            });
+
+            clickedCard.classList.add("active");
+
+
+            setTimeout(() => {
+                detailsBox.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }, 100);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

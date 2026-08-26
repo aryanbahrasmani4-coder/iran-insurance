@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>فرم درخواست بیمه | بیمه ایران</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            background: #f5f8fc;
+            color: #163a63;
+        }
+
+        header {
+            background: #005baa;
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            margin-bottom: 12px;
+            font-size: 32px;
+        }
+
+        header p {
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        .back-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 25px auto;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background: #005baa;
+            color: white;
+            text-decoration: none;
+            padding: 12px 22px;
+            border-radius: 10px;
+        }
+
+        .intro {
+            width: 90%;
+            max-width: 850px;
+            margin: 20px auto 35px;
+            text-align: center;
+        }
+
+        .intro h2 {
+            color: #005baa;
+            margin-bottom: 15px;
+        }
+
+        .intro p {
+            color: #555;
+            line-height: 2.2;
+        }
+
+        .form-container,
+        .request-list {
+            width: 90%;
+            max-width: 850px;
+            margin: 30px auto;
+            background: white;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0,91,170,0.12);
+        }
+
+        .form-container h2,
+        .request-list h2 {
+            text-align: center;
+            color: #005baa;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccdceb;
+            border-radius: 10px;
+            font-family: Tahoma, Arial, sans-serif;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #005baa;
+            box-shadow: 0 0 8px rgba(0,91,170,0.15);
+        }
+
+        textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+
+        .dynamic-fields {
+            display: none;
+            margin-top: 20px;
+            padding: 25px;
+            background: #f1f7fc;
+            border-radius: 15px;
+            border-right: 5px solid #005baa;
+        }
+
+        .dynamic-fields.show {
+            display: block;
+        }
+
+        .dynamic-fields h3 {
+            color: #005baa;
+            margin-bottom: 20px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            background: #005baa;
+            color: white;
+            font-family: Tahoma, Arial, sans-serif;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: #003d73;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .success {
+            color: green;
+        }
+
+        .error {
+            color: #d60000;
+        }
+
+        .request-list ul {
+            list-style: none;
+        }
+
+        .request-list li {
+            background: #f1f7fc;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border-right: 4px solid #005baa;
+            color: #333;
+        }
+
+        .empty {
+            text-align: center;
+            color: #777;
+        }
+
+        footer {
+            margin-top: 50px;
+            background: #003d73;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            line-height: 2;
+        }
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 25px;
+            }
+
+            .form-container,
+            .request-list {
+                padding: 22px 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>فرم درخواست بیمه</h1>
+
+        <p>
+            نوع بیمه مورد نظر خود را انتخاب کنید تا فرم مخصوص درخواست شما نمایش داده شود.
+        </p>
+    </header>
+
+
+    <div class="back-container">
+        <a href="index.html" class="back-btn">
+            ← بازگشت به صفحه اصلی
+        </a>
+    </div>
+
+
+    <section class="intro">
+
+        <h2>درخواست خود را هوشمند ثبت کنید</h2>
+
+        <p>
+            پس از انتخاب نوع بیمه، فقط اطلاعات اولیه مورد نیاز همان بیمه از شما دریافت می‌شود.
+            پس از بررسی درخواست، برای راهنمایی و ادامه مراحل با شما تماس گرفته خواهد شد.
+        </p>
+
+    </section>
+
+
+    <section class="form-container">
+
+        <h2>اطلاعات درخواست</h2>
+
+        <form id="insuranceForm">
+
+            <!-- اطلاعات اصلی -->
+
+            <div class="form-group">
+                <label>نام و نام خانوادگی *</label>
+
+                <input
+                    type="text"
+                    id="fullname"
+                    placeholder="نام و نام خانوادگی خود را وارد کنید"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label>شماره تماس *</label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="مثال: 09123456789"
+                    maxlength="11"
+                >
+            </div>
+
+
+            <div class="form-group">
+                <label>نوع بیمه مورد نظر *</label>
+
+                <select id="insuranceType" onchange="showFields()">
+
+                    <option value="">نوع بیمه را انتخاب کنید</option>
+
+                    <option value="third">بیمه شخص ثالث</option>
+                    <option value="body">بیمه بدنه خودرو</option>
+                    <option value="health">بیمه درمان</option>
+                    <option value="life">بیمه عمر</option>
+                    <option value="fire">بیمه آتش‌سوزی</option>
+                    <option value="home">بیمه منزل</option>
+                    <option value="agriculture">بیمه کشاورزی</option>
+                    <option value="travel">بیمه مسافرتی</option>
+                    <option value="responsibility">بیمه مسئولیت</option>
+                    <option value="engineering">بیمه مهندسی</option>
+                    <option value="cargo">بیمه باربری</option>
+
+                </select>
+            </div>
+
+
+            <!-- شخص ثالث -->
+
+            <div class="dynamic-fields" id="third">
+
+                <h3>🚗 اطلاعات خودرو</h3>
+
+                <div class="form-group">
+                    <label>شماره پلاک خودرو *</label>
+                    <input type="text" placeholder="مثال: 12 الف 345 ایران 67">
+                </div>
+
+                <div class="form-group">
+                    <label>نوع و مدل خودرو *</label>
+                    <input type="text" placeholder="مثال: پژو 207">
+                </div>
+
+                <div class="form-group">
+                    <label>سال ساخت خودرو</label>
+                    <input type="number" placeholder="مثال: 1402">
+                </div>
+
+            </div>
+
+
+            <!-- بدنه -->
+
+            <div class="dynamic-fields" id="body">
+
+                <h3>🚙 اطلاعات خودرو برای بیمه بدنه</h3>
+
+                <div class="form-group">
+                    <label>نوع و مدل خودرو *</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>سال ساخت *</label>
+                    <input type="number">
+                </div>
+
+                <div class="form-group">
+                    <label>ارزش تقریبی خودرو *</label>
+                    <input type="text" placeholder="مثال: 1,000,000,000 تومان">
+                </div>
+
+            </div>
+
+
+            <!-- درمان -->
+
+            <div class="dynamic-fields" id="health">
+
+                <h3>🏥 اطلاعات بیمه درمان</h3>
+
+                <div class="form-group">
+                    <label>تعداد افراد مورد درخواست بیمه *</label>
+                    <input type="number">
+                </div>
+
+                <div class="form-group">
+                    <label>نوع درخواست</label>
+
+                    <select>
+                        <option>بیمه درمان انفرادی</option>
+                        <option>بیمه درمان خانواده</option>
+                        <option>بیمه درمان گروهی</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- عمر -->
+
+            <div class="dynamic-fields" id="life">
+
+                <h3>❤️ اطلاعات بیمه عمر</h3>
+
+                <div class="form-group">
+                    <label>سن متقاضی *</label>
+                    <input type="number">
+                </div>
+
+                <div class="form-group">
+                    <label>میزان پرداخت تقریبی مورد نظر</label>
+                    <input type="text" placeholder="مثال: ماهانه 1 میلیون تومان">
+                </div>
+
+            </div>
+
+
+            <!-- آتش سوزی -->
+
+            <div class="dynamic-fields" id="fire">
+
+                <h3>🔥 اطلاعات محل مورد نظر</h3>
+
+                <div class="form-group">
+                    <label>نوع ساختمان *</label>
+
+                    <select>
+                        <option>مسکونی</option>
+                        <option>تجاری</option>
+                        <option>اداری</option>
+                        <option>کارگاهی</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>آدرس محل *</label>
+                    <textarea></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>ارزش تقریبی ساختمان و اموال</label>
+                    <input type="text">
+                </div>
+
+            </div>
+
+
+            <!-- منزل -->
+
+            <div class="dynamic-fields" id="home">
+
+                <h3>🏠 اطلاعات منزل</h3>
+
+                <div class="form-group">
+                    <label>نوع ملک *</label>
+                    <select>
+                        <option>آپارتمان</option>
+                        <option>خانه ویلایی</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>آدرس منزل *</label>
+                    <textarea></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>ارزش تقریبی اموال</label>
+                    <input type="text">
+                </div>
+
+            </div>
+
+
+            <!-- کشاورزی -->
+
+            <div class="dynamic-fields" id="agriculture">
+
+                <h3>🌾 اطلاعات فعالیت کشاورزی</h3>
+
+                <div class="form-group">
+                    <label>نوع محصول یا فعالیت *</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>موقعیت یا محل فعالیت *</label>
+                    <textarea></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>مساحت تقریبی</label>
+                    <input type="text">
+                </div>
+
+            </div>
+
+
+            <!-- مسافرتی -->
+
+            <div class="dynamic-fields" id="travel">
+
+                <h3>✈️ اطلاعات سفر</h3>
+
+                <div class="form-group">
+                    <label>مقصد سفر *</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>مدت سفر *</label>
+                    <input type="text" placeholder="مثال: 10 روز">
+                </div>
+
+                <div class="form-group">
+                    <label>تعداد مسافران *</label>
+                    <input type="number">
+                </div>
+
+            </div>
+
+
+            <!-- مسئولیت -->
+
+            <div class="dynamic-fields" id="responsibility">
+
+                <h3>🏢 اطلاعات بیمه مسئولیت</h3>
+
+                <div class="form-group">
+                    <label>نوع فعالیت یا شغل *</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>محل فعالیت *</label>
+                    <textarea></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>تعداد افراد مرتبط</label>
+                    <input type="number">
+                </div>
+
+            </div>
+
+
+            <!-- مهندسی -->
+
+            <div class="dynamic-fields" id="engineering">
+
+                <h3>👷 اطلاعات پروژه</h3>
+
+                <div class="form-group">
+                    <label>نام یا نوع پروژه *</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>محل اجرای پروژه *</label>
+                    <textarea></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>ارزش تقریبی پروژه</label>
+                    <input type="text">
+                </div>
+
+            </div>
+
+
+            <!-- باربری -->
+
+            <div class="dynamic-fields" id="cargo">
+
+                <h3>🚢 اطلاعات بار</h3>
+
+                <div class="form-group">
+                    <label>نوع کالا *</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>مبدا و مقصد *</label>
+                    <input type="text">
+                </div>
+
+                <div class="form-group">
+                    <label>روش حمل *</label>
+
+                    <select>
+                        <option>زمینی</option>
+                        <option>دریایی</option>
+                        <option>هوایی</option>
+                    </select>
+                </div>
+
+            </div>
+
+
+            <!-- توضیحات -->
+
+            <div class="form-group" style="margin-top: 25px;">
+
+                <label>توضیحات یا درخواست ویژه</label>
+
+                <textarea
+                    id="description"
+                    placeholder="اگر توضیح خاصی دارید اینجا بنویسید..."
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="submit-btn">
+                ثبت درخواست بیمه
+            </button>
+
+            <div id="message" class="message"></div>
+
+        </form>
+
+    </section>
+
+
+    <!-- لیست درخواست‌ها -->
+
+    <section class="request-list">
+
+        <h2>درخواست‌های ثبت‌شده</h2>
+
+        <ul id="requestList">
+
+            <li class="empty" id="emptyRequest">
+                هنوز درخواستی ثبت نشده است.
+            </li>
+
+        </ul>
+
+    </section>
+
+
+    <footer>
+
+        <p>بیمه ایران | نمایندگی خانم عظیمی جلگه</p>
+
+        <p>آرامش امروز، اطمینان فردا</p>
+
+    </footer>
+
+
+    <script>
+
+        function showFields() {
+
+            const type =
+                document.getElementById("insuranceType").value;
+
+
+            document
+                .querySelectorAll(".dynamic-fields")
+                .forEach(function(field) {
+
+                    field.classList.remove("show");
+
+                });
+
+
+            if (type !== "") {
+
+                document
+                    .getElementById(type)
+                    .classList
+                    .add("show");
+
+            }
+
+        }
+
+
+        const form =
+            document.getElementById("insuranceForm");
+
+
+        form.addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+
+            const fullname =
+                document.getElementById("fullname").value.trim();
+
+
+            const phone =
+                document.getElementById("phone").value.trim();
+
+
+            const insuranceTypeSelect =
+                document.getElementById("insuranceType");
+
+
+            const insuranceType =
+                insuranceTypeSelect.value;
+
+
+            const insuranceName =
+                insuranceTypeSelect.options[
+                    insuranceTypeSelect.selectedIndex
+                ].text;
+
+
+            const message =
+                document.getElementById("message");
+
+
+            if (fullname.length < 3) {
+
+                message.textContent =
+                    "لطفاً نام و نام خانوادگی را به‌درستی وارد کنید.";
+
+                message.className =
+                    "message error";
+
+                return;
+
+            }
+
+
+            const phonePattern = /^09[0-9]{9}$/;
+
+
+            if (!phonePattern.test(phone)) {
+
+                message.textContent =
+                    "لطفاً شماره تلفن معتبر ۱۱ رقمی وارد کنید.";
+
+                message.className =
+                    "message error";
+
+                return;
+
+            }
+
+
+            if (insuranceType === "") {
+
+                message.textContent =
+                    "لطفاً نوع بیمه مورد نظر را انتخاب کنید.";
+
+                message.className =
+                    "message error";
+
+                return;
+
+            }
+
+
+            /* بررسی فیلدهای ضروری فرم انتخاب‌شده */
+
+            const activeFields =
+                document.querySelector("#" + insuranceType);
+
+
+            const requiredInputs =
+                activeFields.querySelectorAll(
+                    "input, textarea, select"
+                );
+
+
+            for (let input of requiredInputs) {
+
+                if (
+                    input.parentElement
+                        .querySelector("label")
+                        .textContent.includes("*")
+                    &&
+                    input.value.trim() === ""
+                ) {
+
+                    message.textContent =
+                        "لطفاً تمام اطلاعات ضروری را وارد کنید.";
+
+                    message.className =
+                        "message error";
+
+                    return;
+
+                }
+
+            }
+
+
+            /* حذف پیام خالی */
+
+            const emptyRequest =
+                document.getElementById("emptyRequest");
+
+
+            if (emptyRequest) {
+
+                emptyRequest.remove();
+
+            }
+
+
+            /* اضافه کردن درخواست */
+
+            const requestList =
+                document.getElementById("requestList");
+
+
+            const newRequest =
+                document.createElement("li");
+
+
+            newRequest.innerHTML =
+                "<strong>" + fullname + "</strong>" +
+                "<br>" +
+                "نوع درخواست: " + insuranceName +
+                "<br>" +
+                "شماره تماس: " + phone;
+
+
+            requestList.appendChild(newRequest);
+
+
+            message.textContent =
+                "درخواست بیمه با موفقیت ثبت شد.";
+
+            message.className =
+                "message success";
+
+
+            form.reset();
+
+
+            document
+                .querySelectorAll(".dynamic-fields")
+                .forEach(function(field) {
+
+                    field.classList.remove("show");
+
+                });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
