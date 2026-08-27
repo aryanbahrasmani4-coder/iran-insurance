@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 
@@ -19,87 +18,6 @@
             font-family: Tahoma, Arial, sans-serif;
             background: #f5f8fc;
             color: #163a63;
-        }
-
-        /* پنجره عضویت */
-        .member-modal {
-            position: fixed;
-            inset: 0;
-            background: rgba(0, 40, 80, 0.82);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 99999;
-            padding: 20px;
-        }
-
-        .member-modal.hidden {
-            display: none;
-        }
-
-        .member-box {
-            background: white;
-            width: 100%;
-            max-width: 430px;
-            padding: 35px 25px;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .member-box h2 {
-            color: #005baa;
-            margin-bottom: 15px;
-        }
-
-        .member-box p {
-            color: #666;
-            line-height: 2;
-            margin-bottom: 20px;
-        }
-
-        .member-box input {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 12px;
-            border: 1px solid #d5e1ee;
-            border-radius: 10px;
-            font-family: Tahoma, Arial, sans-serif;
-            font-size: 16px;
-            outline: none;
-        }
-
-        .member-box input:focus {
-            border-color: #005baa;
-        }
-
-        .member-box button {
-            width: 100%;
-            padding: 14px;
-            background: #005baa;
-            color: white;
-            border: none;
-            border-radius: 10px;
-            font-family: Tahoma, Arial, sans-serif;
-            font-size: 16px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .member-box button:hover {
-            background: #004b8c;
-        }
-
-        .member-box button:disabled {
-            opacity: 0.7;
-            cursor: not-allowed;
-        }
-
-        .member-message {
-            margin-top: 14px;
-            color: #c40000;
-            font-size: 14px;
-            min-height: 20px;
         }
 
         /* هدر */
@@ -176,7 +94,7 @@
             font-size: 17px;
         }
 
-        /* کارت‌ها */
+        /* کارت‌های خدمات */
         .services {
             width: 90%;
             max-width: 1100px;
@@ -220,41 +138,6 @@
             color: #666;
             font-size: 15px;
             line-height: 1.8;
-        }
-
-        /* اعضای سایت */
-        .members-section {
-            width: 90%;
-            max-width: 1100px;
-            margin: 10px auto 60px;
-            text-align: center;
-        }
-
-        .members-section h2 {
-            color: #005baa;
-            font-size: 30px;
-            margin-bottom: 12px;
-        }
-
-        .members-section > p {
-            color: #666;
-            margin-bottom: 25px;
-        }
-
-        .members-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-        }
-
-        .member-card {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 5px 18px rgba(0, 91, 170, 0.12);
-            border: 1px solid #e3edf7;
-            color: #163a63;
-            font-size: 17px;
         }
 
         /* فوتر */
@@ -326,52 +209,11 @@
             .slogan {
                 font-size: 17px;
             }
-
-            .services-title h2,
-            .members-section h2 {
-                font-size: 25px;
-            }
         }
     </style>
 </head>
 
 <body>
-
-    <!-- پنجره اجباری ثبت عضویت -->
-    <div class="member-modal" id="memberModal">
-
-        <div class="member-box">
-
-            <h2>به سایت خوش آمدید 👋</h2>
-
-            <p>
-                برای ورود به سایت، لطفاً نام و نام خانوادگی خود را وارد کنید.
-            </p>
-
-            <input
-                type="text"
-                id="firstName"
-                placeholder="نام"
-                autocomplete="given-name"
-            >
-
-            <input
-                type="text"
-                id="lastName"
-                placeholder="نام خانوادگی"
-                autocomplete="family-name"
-            >
-
-            <button id="registerMember">
-                ثبت عضویت و ورود به سایت
-            </button>
-
-            <div class="member-message" id="memberMessage"></div>
-
-        </div>
-
-    </div>
-
 
     <!-- هدر -->
     <header>
@@ -381,7 +223,6 @@
 
         <h2>نمایندگی خانم عظیمی جلگه</h2>
     </header>
-
 
     <!-- خوش‌آمدگویی -->
     <section class="hero">
@@ -399,7 +240,6 @@
 
     </section>
 
-
     <!-- عنوان خدمات -->
     <section class="services-title">
 
@@ -410,7 +250,6 @@
         </p>
 
     </section>
-
 
     <!-- کارت‌های خدمات -->
     <section class="services">
@@ -447,23 +286,6 @@
 
     </section>
 
-
-    <!-- اعضای سایت -->
-    <section class="members-section">
-
-        <h2>👥 اعضای سایت</h2>
-
-        <p>
-            اعضای ثبت‌شده در سایت
-        </p>
-
-        <div class="members-list" id="membersList">
-            در حال دریافت اعضا...
-        </div>
-
-    </section>
-
-
     <!-- فوتر -->
     <footer>
 
@@ -480,273 +302,13 @@
 
     </footer>
 
-
-    <a
-        href="https://rubika.ir/Timoti_66"
-        target="_blank"
-        class="jr-contact"
-    >
+    <!-- دکمه ارتباط با طراح -->
+    <a href="https://rubika.ir/Timoti_66"
+       target="_blank"
+       class="jr-contact">
         ارتباط با JR EDITSITE
     </a>
-
-
-    <!-- کتابخانه Supabase -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-    <script>
-
-        /* اتصال به Supabase */
-
-        const supabaseUrl =
-            "https://xjzbkcnoledwpmraundy.supabase.co";
-
-        const supabaseKey =
-            "sb_publishable_CTVMzMZtiAishtVbJxdy9w_8u0YlAzI";
-
-
-        const supabaseClient =
-            window.supabase.createClient(
-                supabaseUrl,
-                supabaseKey
-            );
-
-
-        /* گرفتن عناصر */
-
-        const memberModal =
-            document.getElementById("memberModal");
-
-        const firstNameInput =
-            document.getElementById("firstName");
-
-        const lastNameInput =
-            document.getElementById("lastName");
-
-        const registerButton =
-            document.getElementById("registerMember");
-
-        const memberMessage =
-            document.getElementById("memberMessage");
-
-        const membersList =
-            document.getElementById("membersList");
-
-
-        /* بررسی اینکه قبلاً عضو شده یا نه */
-
-        const savedMember =
-            localStorage.getItem("insuranceSiteMember");
-
-
-        if (savedMember) {
-
-            memberModal.classList.add("hidden");
-
-        }
-
-
-        /* ثبت عضویت */
-
-        registerButton.addEventListener(
-            "click",
-            async function () {
-
-                const firstName =
-                    firstNameInput.value.trim();
-
-                const lastName =
-                    lastNameInput.value.trim();
-
-
-                /* جلوگیری از ورود بدون نام */
-
-                if (!firstName && !lastName) {
-
-                    memberMessage.textContent =
-                        "برای ورود به سایت باید نام و نام خانوادگی خود را وارد کنید.";
-
-                    return;
-                }
-
-
-                if (!firstName) {
-
-                    memberMessage.textContent =
-                        "لطفاً نام خود را وارد کنید.";
-
-                    firstNameInput.focus();
-
-                    return;
-                }
-
-
-                if (!lastName) {
-
-                    memberMessage.textContent =
-                        "لطفاً نام خانوادگی خود را وارد کنید.";
-
-                    lastNameInput.focus();
-
-                    return;
-                }
-
-
-                memberMessage.textContent = "";
-
-
-                registerButton.disabled = true;
-
-                registerButton.textContent =
-                    "در حال ثبت عضویت...";
-
-
-                try {
-
-                    const { data, error } =
-                        await supabaseClient
-                            .from("site_members")
-                            .insert([
-                                {
-                                    first_name: firstName,
-                                    last_name: lastName
-                                }
-                            ])
-                            .select();
-
-
-                    if (error) {
-
-                        console.error(error);
-
-                        memberMessage.textContent =
-                            "خطا در ثبت عضویت: " +
-                            error.message;
-
-
-                        registerButton.disabled = false;
-
-                        registerButton.textContent =
-                            "ثبت عضویت و ورود به سایت";
-
-                        return;
-
-                    }
-
-
-                    /* ذخیره اطلاعات در مرورگر */
-
-                    localStorage.setItem(
-                        "insuranceSiteMember",
-                        JSON.stringify(data[0])
-                    );
-
-
-                    /* فقط بعد از ثبت موفق وارد سایت شود */
-
-                    memberModal.classList.add("hidden");
-
-
-                    /* نمایش عضو جدید */
-
-                    loadMembers();
-
-
-                } catch (error) {
-
-                    console.error(error);
-
-                    memberMessage.textContent =
-                        "خطایی در اتصال به سایت رخ داد. دوباره تلاش کنید.";
-
-                    registerButton.disabled = false;
-
-                    registerButton.textContent =
-                        "ثبت عضویت و ورود به سایت";
-
-                }
-
-            }
-        );
-
-
-        /* دریافت و نمایش اعضا */
-
-        async function loadMembers() {
-
-            try {
-
-                const { data, error } =
-                    await supabaseClient
-                        .from("site_members")
-                        .select("first_name, last_name");
-
-
-                if (error) {
-
-                    console.error(error);
-
-                    membersList.textContent =
-                        "خطا در دریافت اعضا.";
-
-                    return;
-
-                }
-
-
-                if (!data || data.length === 0) {
-
-                    membersList.textContent =
-                        "هنوز عضوی ثبت نشده است.";
-
-                    return;
-
-                }
-
-
-                membersList.innerHTML = "";
-
-
-                data.forEach(function (member) {
-
-                    const memberCard =
-                        document.createElement("div");
-
-
-                    memberCard.className =
-                        "member-card";
-
-
-                    memberCard.textContent =
-                        "👤 " +
-                        member.first_name +
-                        " " +
-                        member.last_name;
-
-
-                    membersList.appendChild(memberCard);
-
-                });
-
-
-            } catch (error) {
-
-                console.error(error);
-
-                membersList.textContent =
-                    "خطا در اتصال به سرور.";
-
-            }
-
-        }
-
-
-        /* گرفتن اعضا هنگام باز شدن سایت */
-
-        loadMembers();
-
-    </script>
 
 </body>
 
 </html>
-```
